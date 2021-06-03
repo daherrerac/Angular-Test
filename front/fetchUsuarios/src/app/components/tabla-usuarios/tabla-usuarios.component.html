@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center my-5">
+        Tabla de clientes registrados
+    </h1>
+    <table class="table text-center mt-5">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Identificación</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Fecha de nacimiento</th>            
+            <th><i class="fas fa-info-circle"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of listUsuarios">
+            <th scope="row">{{usuario.id}} </th>
+            <td> {{usuario.identificacion}} </td>
+            <td> {{usuario.nombre}} </td>
+            <td> {{usuario.edad}} </td>
+            <td> {{usuario.fNacimiento}} </td>            
+            <td><a [routerLink]="['/usuario', usuario.id]" class="btn btn-info">Detalle</a></td>
+          </tr>          
+        </tbody>
+      </table>
+</div>

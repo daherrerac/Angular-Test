@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="mt-5 text-center">
+        Detalle Usuario
+    </h1>
+
+    <h2 *ngIf="detalleUsuario[0] > 0 " class="text-center mt-5"> 
+        Nombre: {{detalleUsuario[2]}}        
+    </h2>
+    <p>Id: {{detalleUsuario [0] }}         
+    </p>
+    <p> <span>Identificación: {{detalleUsuario [1] }} </span>
+        <input *ngIf="item" type="text" class="form-control"  value="{{detalleUsuario [1] }}"/>
+    </p>
+    <p> <span>Edad: {{detalleUsuario [3] }} </span>
+        <input *ngIf="item" type="text" class="form-control"  value="{{detalleUsuario [3] }}"/>
+    </p>
+    <p>
+        <span>Fecha de nacimiento: {{detalleUsuario [4] }} </span>
+        <input *ngIf="item" type="text" class="form-control"  value="{{detalleUsuario [4] }}"/>
+    </p>
+    
+    <a  class="btn btn-info" (click)="item = true"><i class="far fa-edit"></i> Editar</a>
+    <a  *ngIf="item" class="btn btn-success" (click)="item = false"><i class="far fa-save"></i> Guardar</a>
+    <a routerLink="/" class="btn btn-primary">Inicio</a>
+</div>
+
